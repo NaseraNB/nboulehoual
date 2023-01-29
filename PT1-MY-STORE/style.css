@@ -1,0 +1,203 @@
+body{
+background-color: rgb(0, 0, 0);
+}
+.titulo {
+    text-decoration: overline;
+    color:rgb(235, 141, 0);
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container {
+    position: relative;
+}
+  
+.bottomright {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 9px;
+  right: 170px;
+  font-size: 17px;
+}
+
+.portada { 
+  width: 80%;
+  height: auto;
+  opacity: 0.4;
+  display: block;
+  margin: auto;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
+h1{
+  color:rgb(255, 145, 0);
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+ul li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+a{
+  color:rgb(255, 191, 0);
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a:hover{
+  color: rgb(115, 35, 213);
+}
+p{
+  color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+section {
+  width: 1500px;
+  margin: 30px auto;
+  padding-top: 60px;
+  justify-content: center;
+  }
+  
+
+article{
+    border: 5px solid rgb(82, 195, 154);
+    margin: 30px;
+    padding: 50px;
+    display: inline-block;
+    justify-content: center;
+    opacity: 0.9;
+    border-radius: 60px;
+    box-shadow: 8px 8px 20px  rgb(0, 170, 255);
+}
+
+.ar1{
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 470px;
+  border-radius: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.ar1 p{
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: left;
+}
+
+.ar1 a{
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.ar1 a:hover{
+  color: rgb(35, 213, 142);
+}
+
+.bottomright2{
+  color: rgb(5, 0, 0);
+  bottom: 9px;
+  font-size: 17px;
+}
+
+.Call{
+  margin: auto;
+  height: auto;
+  width: 80%;
+  display: block;
+  border-radius: 25px;
+}
+
+.wow{
+  margin: auto;
+  height: auto;
+  width: 80%;
+  display: block;
+  border-radius: 25px;
+}
+
+.ov{
+  margin: auto;
+  height: auto;
+  width: 80%;
+  display: block;
+  border-radius: 25px;
+}
+
+.di{
+  margin: auto;
+  height: auto;
+  width: 80%;
+  display: block;
+  border-radius: 25px;
+}
+
+.hear{
+  margin: auto;
+  height: auto;
+  width: 80%;
+  display: block;
+  border-radius: 25px;
+}
+
+.star{
+  margin: auto;
+  height: auto;
+  width: 80%;
+  display: block;
+  border-radius: 25px;
+}
+
+form{
+  color: white;
+}
+
+.fa {
+  padding: 30px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 10%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #f94ef9;
+  color: white;
+}
+
+footer{
+  color:white;
+}
