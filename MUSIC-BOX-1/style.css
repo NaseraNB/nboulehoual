@@ -1,0 +1,190 @@
+body{
+    font-family: sans-serif;
+    background-color: lightcoral;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ImagineDragons{
+   width: 50%; 
+   height: 560px;
+   overflow: hidden;
+   position: relative;
+   margin: 50px auto; /* Nos permite poner la imagen en el centro */
+   border-radius: 25px; /*Redondea la imagen*/
+   box-shadow: 25px 20px 12px black; /*Difumida la imagen*/
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+   max-width: 1000px;
+   min-width: 350px;
+}
+
+.ImagineDragons:hover{
+    transform: scale(1.1);
+    box-shadow: 13px 15px 37px black;
+}
+
+.ImagineDragons img{
+    width: 100%; 
+    height: 100%;
+}
+
+.ImagineDragons P{
+    font-size: 3rem; /* Tamño del la letra */
+    color: white; /* Color de la letra */
+    position: absolute; /* Centra la frase junto la imagen */
+    top: 70%; /* Arriba */
+    left: 50%; /* izquierda */
+    transform: translate(-50%,-50%);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 8px lightcoral; /* Sombras a la letra */
+}
+
+a{
+    display: flex;
+    display: block;
+    width: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900px;
+    background-color: rgb(0, 0, 0);
+    border: 10px solid #db82ff;
+    border-radius: 90%;
+    padding: 100px;
+    margin: 100px;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 25%;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-shadow: 10px 11px 5px #6EA7F1, 0px 0px 5px #ffffff, 0px 0px 5px #d56ebf, 0px 0px 5px #ffe600;
+    
+}
+
+a:hover{
+    background-color:#628775;
+    border: 10px solid #000000;
+    color: black;
+}
+
+.musicplayer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0vh;
+    margin-top: 350px;
+    margin-right: 20%;
+    
+
+}
+
+
+.player{
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 350px;
+    position: relative;
+}
+
+.player .imagemusic{
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+
+.player .imagemusic img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+
+
+.galeria{
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 lightblue, 0 6px 20px black;
+    float: left;
+    width: 31%;
+    background-color: #6EA7F1;
+    height: auto;
+    padding: 6.2px;
+}
+
+.galeria img{
+    width: 100%;
+    height: auto;
+}
+
+.galeria:hover{
+    border: 3px solid black;
+    transform: rotate(-3deg);
+}
+
+.pie{
+    text-align: center;
+    text-shadow: 6px 1px 5px white;
+    padding: 10px;
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+}
+
+
+
+.ComInt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45%;
+    font-size: 2rem;
+}
+
+.ComInt .Components{
+    margin-right: 15%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  
+  td, th {
+    border: 10px solid #dddddd;
+    text-align: left;
+    padding: 30px;
+  }
+
+.Video1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.Video1 .vi{
+    border-radius: 5%;
+    margin-right: 20px;
+}
+.Music{
+    border-radius: 80%;
+}
+
+.maps{
+    display: flex;
+    justify-content: center;
+}
+
+.maps .mapscom{
+    border-radius: 4%;
+    margin: 9px 20px;
+    box-shadow: 0 6px 8px 0 lightblue, 0 6px 20px black;
+}
+
+.footer{
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
