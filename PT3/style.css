@@ -1,0 +1,154 @@
+body{
+    background: white; /* Fonts blanc */
+    font-family:Verdana, Geneva, Tahoma, sans-serif; /* Tipus de lletra */
+    margin: 0; /* Margent de los lados */
+}
+
+a{
+    text-decoration: none;
+    color: white; /* El color del texto sera blanco */
+}
+
+header{
+    display: flex; /* Organiza los elementos de derecha a */
+    background-color: #000000;
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+
+.logo img{
+    height: 90px;
+    margin-right: 25px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 8px rgb(255, 255, 255); /*Difumida la imagen*/
+}
+
+
+nav a{
+    font-weight: 600;
+    padding-right: 20px;
+    margin-left: 25px;
+}
+nav a:hover{ /* hover hace referencia cunado nosotros pasemos por encima del menu */
+    color:#89cad3 ;
+}
+
+.Nom{
+    color: rgb(255, 255, 255);
+}
+
+.Historia1{
+    margin: 50px;
+}
+.Historia1 .historia{
+    text-align: center;
+}
+
+.newspaper{
+    column-count: 2;
+    column-gap: 40px;
+    column-rule-style: solid;
+    align-items: center;
+    font-size: 20px;
+}
+
+.conta{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.conta img{
+    max-width: 400px;
+    padding: 1rem;
+    border-radius: 5%;
+}
+
+
+#Video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Video .video{
+    box-shadow: 6px 20px 20px 0 rgba(0, 157, 255, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#Video iframe{
+    margin: 10px;
+}
+
+#Mapa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Mapa .mapa{
+    border-radius: 10%;
+    box-shadow: 6px 20px 20px 0 rgba(0, 157, 255, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer {
+    background-color: #333;
+    padding: 150px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+ 
+@media (max-width: 576px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 25px 10px;
+        /* Arriba y abajo 10 de padding
+        izquierda y derecha 0px de pading*/
+    }
+    .Historia1{
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+
+    .conta .img1{
+        width: 450px;
+        height: 350px;
+        margin: 10px;
+    }
+
+    #Video iframe{
+        width: 450px;
+        height: 350px;
+        margin: 10px;
+    }
+
+    #Mapa iframe{
+        width: 450px;
+        height: 350px;
+        margin: 10px;
+    }
+
+    #Galeria iframe{
+        width: 450px;
+        height: 350px;
+        margin: 10px;
+    }
+
+    footer{
+        flex-direction: column;
+        padding: 25px 10px;
+    }
+}
