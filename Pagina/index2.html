@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css"> 
+    <title>Program code</title>
+</head>
+<body>
+    <h1>ROCK PAPER SCISSORS PROGRAM CODE</h1>
+    <div class="caja">
+        <p>
+            package tasca7Estructuresderepetició2;<br>
+            <br>
+            import java.util.Scanner;<br>
+            // Autor: Nasera Boulehoual<br>
+            public class Repeticio2_1 {<br>
+                <br>
+                public static void main(String[] args) {<br>
+                    /* PEDRA-PAPER-TISORA (millorat) Escriu un programa que jugui <br>
+                    * a pedra-paper-tisora. El programa genera un número 0, 1 o 2 <br>
+                    * representant pedra, paper o tisora. <br>
+                    * El programa demana un número a l’usuari 0, 1 o 2 i <br>
+                    * mostra un missatge indicant si l’usuari o l’ordinador <br>
+                    * guanyen, perden o empaten. <br>
+                    * Revisa el programa per permetre a l’usuari <br>
+                    * jugar contínuament fins que o bé l’ordinador <br>
+                    * o bé l’usuari guanyi tres partides.<br>
+                    * pedra (0), paper (1), tisores (2): 2<br>
+                    * Ordinador ha tret tisores. Jugador ha tret tisores. És un empat. */<br>
+                    <br>
+                    /* En la pantalla del usuario aparecera un cuadrado dibujado */<br>
+                    System.out.println("            +----------------+"); <br>
+                    System.out.printf("%26s","| " + "0 " + "| PEDRA   "); <br>
+                    System.out.println(" ");<br>
+                    System.out.printf("%24s","| " + "1 " + "| PAPER ");<br>
+                    System.out.println(" ");<br>
+                    System.out.printf("%25s","| " + "2 " + "| TISORA ");<br>
+                    System.out.println(" ");<br>
+                    System.out.println("            +----------------+");<br>
+                    System.out.println("\nUS DONEM LA BENVINGUDA AL JOC DE ROCK, PAPER, TISORES ");<br>
+                    <br>
+                    <br>
+                    Scanner entrada = new Scanner(System.in);<br>
+                    <br>
+                    byte contador_jugador = 0, contador_pc =0, jugador, pc;<br>
+                    // El bucle finalizara hasta que el contador del jugador o el ordenador llegen a tres pardidas ganadas<br>
+                    while(Math.abs(contador_jugador - contador_pc) < 3) { <br>
+                        // Le pedimoas al usuario que introduca <br>
+                        System.out.print("\nEntra Pedra (0), Paper (1), Tisora (2): ");<br>
+                        jugador = entrada.nextByte();<br>
+                        // Guardamos los datos del usuario entro de la variable jugador<br>
+                        pc = (byte) (Math.random() *3);<br>
+                        // La variable pc contendra el valor aleatorio del programa.<br>
+                        <br>
+                        // Si son empates<br>
+                        // Si el jugador es igual que el pc.<br>
+                        if (jugador == pc) {<br>
+                            // si nostros sacamos piedra y el programa tambien, saldra un mensjae de empate<br>
+                            if (pc == 0) {<br>
+                                System.out.println("El pc a triat pedra és un empat");<br>
+                            // si nostros sacamos papel y el programa tambien, saldra un mensjae de empate<br>
+                            } else if (pc == 1) {<br>
+                                System.out.println("El pc a triat paper és un empat");<br>
+                            // si nostros sacamos tijeras y el programa tambien, saldra un mensjae de empate<br>
+                            } else {<br>
+                                System.out.println("El pc a triat tisora és un empat");<br>
+                            }<br>
+                        }<br>
+                        <br>
+                        // jugador saca piedra y el pc no<br>
+                        else if (jugador == 0) {<br>
+                            <br>
+                            // si el jugador saca piedra y el pc saca tijeras nostros ganamos<br>
+                            if (pc == 1) {<br>
+                                <br>
+                                System.out.println("El pc a triat tisora tu guanyas");<br>
+                                <br>
+                                contador_jugador++; // contador contara 1 si a ganado<br>
+                                <br>
+                                // si el pc a sacado papel, gana el pc<br>
+                            } else {<br>
+                                System.out.println("El pc a triat papel has perdut");<br>
+                                contador_pc++; // contador contara 1 si a ganado<br>
+                            }<br>
+                        }<br>
+                        <br>
+                    // jugador saca papel y el pc no<br>
+                        else if (jugador == 1) {<br>
+                            <br>
+                            // si el jugador saca papel y el pc saca piedra nostros ganamos<br>
+                            if (pc == 2) {<br>
+                                <br>
+                                System.out.println("El pc a triat pedra tu guanyas");<br>
+                                contador_jugador++; // contador contara 1 si a ganado<br>
+                                <br>
+                            // si el pc a sacado pedra, gana el pc<br>
+                            } else {<br>
+                                System.out.println("El pc a triat tisora has perdut");<br>
+                                <br>
+                                contador_pc++; // contador contara 1 si a ganado<br>
+                            }<br>
+                        }<br>
+                        <br>
+                        // jugador saca tijeras y el pc no<br>
+                        <br>
+                        else if (jugador == 2) {<br>
+                            <br>
+                            // si el jugador saca tijeras y el pc saca papel nostros ganamos<br>
+                            if (pc == 0) {<br>
+                                System.out.println("El pc a triat papel tu guanyas");<br>
+                                <br>
+                                contador_jugador++; // contador contara 1 si a ganado<br>
+                            // si el pc a sacado pedra, tu pierdes<br>
+                            } else {<br>
+                                System.out.println("El pc a triat pedra has perdut");<br>
+                                contador_pc++; // contador contara 1 si a ganado<br>
+                            }<br>
+                        } else {<br>
+                            System.out.println("Entrada incorrecta");<br>
+                        }<br>
+                        <br>
+                    }<br>
+                    // Reseultado de la puntacion<br>
+                    if (contador_jugador > contador_pc) {<br>
+                        System.out.println("Vas guanyar el joc amb una puntuació " +contador_jugador <br>
+                                +" en comparació amb la puntuació " +contador_pc+ " de la computadora.");<br>
+                    } else {<br>
+                        System.out.println("Vas perdre el joc amb una puntuació de " +contador_jugador <br>
+                                +" en comparació amb la puntuació " +contador_pc+ " de la computadora.");<br>
+                    }<br>
+                }<br>
+            }
+        </p>
+    </div>
+</body>
+</html>
