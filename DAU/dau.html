@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.1.0/dist/aframe-extras.min.js"></script>
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
  
@@ -11,12 +12,12 @@
          <a-assets>
             <img id="img1" src="img.jpeg">
             <img id="img2" src="img2.jpeg">
+            <a-asset-item id="avatarModel" src="scene.gltf"></a-asset-item>
         </a-assets>
      
        <a-marker type="barcode" value="1">
             <a-entity>  
-                <a-box position="0 0.1 0" scale="1.5 1.5 1.5" src=#img1 animation="property: rotation; dur: 6000;
-                to: 0 0 360; loop: true"></a-box>
+                <a-gltf-model src="#avatarModel" scale="0.1 0.1 0.1" position="0 0 0" rotation="90 0 0" animation-mixer ="clip: mixamo.com" >
             </a-entity>
         </a-marker>
 
