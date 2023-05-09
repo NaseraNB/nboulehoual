@@ -1,0 +1,118 @@
+/* Importem un tipus de lletra */
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+
+/* Configuració principal */
+
+body{
+  
+    background: radial-gradient(#fdbb2d, #22c1c3);      
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+       
+}
+
+/* Configuració de la lletra del títol */
+
+h1{
+    font-size: 55px;
+    text-align: center;
+    font-family: 'Carter One', cursive;
+}
+
+/* Configuració de la lletra del comptador */
+
+h2{
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Carter One', cursive;
+}
+
+/* Configuració de les caixes gran */
+
+.game {
+    width: 606px;
+    height: 606px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color:#378d2a;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 25px;
+
+}
+
+/* Configuració de les caixes petites */
+
+.square{
+    height: 200px;
+    width: 200px;
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+/* responsive mòbil*/
+
+@media only screen and (max-width: 600px){
+    h1{
+        font-size: 25px;
+        text-align: center;
+        font-family: 'Carter One', cursive;
+    }
+
+    game{
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    square{
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+    }
+}
+
+/* responsive table */
+
+@media only screen and (min-width: 601px) and (max-width: 900px){
+    h1{
+        font-size: 30px;
+    }
+
+    game{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    square{
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+    }
+}
+
+/* responsive ordinador */
+
+@media only screen and (min-width: 901px) and (max-width: 1200px){
+    h1{
+        font-size: 45px;
+    }
+
+    game{
+        width: 606px;
+        height: 606px;
+        padding: auto;
+    }
+
+    square{
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+    }
+}
