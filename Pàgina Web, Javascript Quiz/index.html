@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Javascript Quiz">
+    <meta name="keywords" content="Exercici I: Pàgina Web, Javascript Quiz">
+    <meta name="author" content="Nasera Boulehoual">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Javascript Quiz</title>
+</head>
+<body>
+    
+    <!-- Capçalera -->
+    <header class="capçalera">
+        <!--Títol-->
+        <h1>Javascript Quiz</h1> 
+        
+        <!-- Enllaç a l'explicació del programa -->
+        <a href="#explicació" class="link">Explicació del Javascript Quiz</a>
+        
+    </header>
+
+    <!-- Div on es trobarà la primera pregunta -->
+    <div class="container">
+        <section id="p0">
+            <h3 id="preId">1 : Què mostrarà?:</h3>
+           
+            <label id="label1">
+                <input type="radio" value="1" name="pre" id="op1"> NaN
+            </label>
+
+            <label id="label2">
+                <input type="radio" value="2" name="pre"  id="op2"> 15
+            </label>
+
+            <label id="label3">
+                <input type="radio" value="3" name="pre"  id="op3"> 105
+            </label>
+
+            <div class="imagenes">
+                <img id="image" src="1.png" alt="Pregunta 1">
+            </div>
+        </section>
+
+        <!-- Botó de corregir -->
+        <button onclick="corregir()">Corregir</button>
+        <h2>Cantidad acertadas: <span id="resultado"></span></h2>
+        <h2>Cantidad incorrectas: <span id="resultado2"></span></h2>
+
+        <!-- Botó de iniciar -->
+        <button id="iniciar" onclick="reiniciar()">Reiniciar</button>
+    </div>
+
+
+
+    <div id="explicació" class="explicació1">
+        <!--Títol 2-->
+        <h3>Explicació del Javascript Quiz</h3>
+
+        <!--Explicació del programa-->
+        <p>Benvingut usuari, aquí et fem una breu explicació del Javascript Quiz, el programa et farà unes 10 preguntes sobre javascript amb un límit de temps, haurà de triar entre tres resultats diferents tria bé i guanyaràs.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
