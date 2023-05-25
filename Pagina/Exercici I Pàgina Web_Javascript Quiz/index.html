@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Javascript Quiz">
+    <meta name="keywords" content="Exercici I: Pàgina Web, Javascript Quiz">
+    <meta name="author" content="Nasera Boulehoual">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon.gif" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript Quiz</title>
+</head>
+<body>
+    <p id="Home"></p>
+
+    <!-- A la capçalera tenim el nostre logo, contactes i explicacio del programa -->
+    <header>
+        <h2 class="logo">
+            <img class="image" src="background3.gif" alt="">
+        </h2>
+        
+        <nav class="navegacio">
+            <a href="#Home">Home</a>
+            <a href="#Explicació">Explicació</a>
+            <a href="#Contactes">Contactes</a>
+        </nav>
+    </header>
+
+    <!-- Pantalla de inici -->
+    <div id="Inici-programa1">
+        <h1>Javascript Quiz</h1>
+    </div>
+
+    <div id="Inici-programa2">
+        <h1>Javascript Quiz</h1>
+        <button class="btn" onclick="comenzarText()">INICIR EL TEXT</button>
+    </div>
+
+    <!-- Pantalla de joc -->
+    <div id="joc-preguntas" class="pantalla-joc"> 
+        <h3 id="idPregunta">1 : Què mostrarà?:</h3>
+        <img src="1.png" alt="" id="imgQuiz">
+
+        <div class="opcions">
+            <div class="opcion" id="op0" onclick="comprobarResposta(0)">
+                <div class="lletra" id="l0">A</div>
+                <div class="nom" id="n0"></div>
+            </div>
+
+            <div class="opcion" id="op1" onclick="comprobarResposta(1)">
+                <div class="lletra" id="l1">B</div>
+                <div class="nom" id="n1"></div>
+            </div>
+
+
+            <div class="opcion" id="op2" onclick="comprobarResposta(2)">
+                <div class="lletra" id="l2">C</div>
+                <div class="nom" id="n2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contador -->
+    <div id="final">
+        <h2>CORRECTES: <span id="numCorrectes">3</span></h2>
+        <h2>INCORRECTA: <span id="numIncorrecta">2</span></h2>
+        <button class="btn" onclick="reniciarText()">REINICIAR TEXT</button>
+    </div>
+
+
+    <!-- Una caixa amb dues caixes dins una que serà l'explicacio i un altre el de contactes -->
+    <div class="container">
+        <div id="Explicació" class="exp">
+            <h2>Explicació</h2><br>
+            <p>L'aplicació "Javascript Quiz" és un qüestionari de 10 preguntes sobre JavaScript. Cada pregunta tindrà un límit de temps per respondre.</p>
+        </div>
+        
+        <div id="Contactes" class="con">
+            <h2>Contactes</h2><br>
+            <p>Nom del creador: Nasera Boulehoual</p>
+            <p>Correu: 04nasera.b@instcastellet.cat</p>
+            <p>Institut: Instituto Castellet</p>
+        </div>
+    </div>
+
+    <!-- Footer de la pàgina -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="text-footer">© 2023 Javascript Quiz</p>
+        </div>
+    </footer>
+
+    <!-- Connexió amb el JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
