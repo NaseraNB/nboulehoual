@@ -13,23 +13,15 @@
     <title>Museu dels déus olímpics</title>
 </head>
 <body>
-    <!-- Creem una nova escena amb A-Frame per al museu  -->
     <a-scene>
-
-        <!-- Definirem els recursos de l'escena del museu -->
         <a-assets>
-            <!-- Definim les textures del museu -->
-            <img id="textura_museu" src="textures/Bathhouse_baseColor.png">
-
-            <!-- Definim el model 3D del museu -->
-            <a-asset-item id="model_museu" src="scene.bin"></a-asset-item>
+             <img id="Museu" src="/textures/Bathhouse_baseColor.png" >  
+             <a-asset-item id="sala" src="scene.gltf"></a-asset-item>
         </a-assets>
-
-        <!-- Creamos un objecto en la escena del modelo 3D-->
-        <a-entity gltf-model="#model_museu"></a-entity>
-
-        <a-plane position="-0 0 -4" src="#textura_museu" rotation="-90 0 0" width="4" height="4"></a-plane>
+        <a-entity gltf-model="#sala" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-sky src="#Museu"></a-sky>
     </a-scene>
+
 </body>
 </html>
 
