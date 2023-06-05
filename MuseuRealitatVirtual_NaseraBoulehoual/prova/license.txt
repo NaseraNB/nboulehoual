@@ -1,0 +1,11 @@
+Model Information:
+* title:	Estatua de Athena
+* source:	https://sketchfab.com/3d-models/estatua-de-athena-0390aa9da1f74214bfe5e7fcc4b9a4d6
+* author:	Adriano.Fontoura.Fraga (https://sketchfab.com/Adriano.Fontoura.Fraga)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Estatua de Athena" (https://sketchfab.com/3d-models/estatua-de-athena-0390aa9da1f74214bfe5e7fcc4b9a4d6) by Adriano.Fontoura.Fraga (https://sketchfab.com/Adriano.Fontoura.Fraga) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

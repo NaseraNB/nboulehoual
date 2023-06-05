@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+             <!-- Posem l'objecte del museu -->
+             <a-asset-item id="sala" src="bathhouse/scene.gltf"></a-asset-item>
+
+            <!-- Posem la textura d'aigua a la pista -->
+            <img id="water" src="mar6.jpg">
+
+             <!-- Posem l'objecte de l'Athena -->
+             <a-asset-item id="Athena" src="prova/scene.gltf"></a-asset-item>
+
+        </a-assets>
+
+        <!-- Posem una posició a aquests objectes -->
+        <a-entity gltf-model="#sala" position="0 5.6 0" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-plane src="#water" position="0 0 0" rotation="-90 0 0" width="15" height="13"></a-plane>
+        <a-entity gltf-model="#Athena" position="0 1 0.5" rotation="5 5 5" scale="0.11 0.11 0.11"></a-entity>
+
+    </a-scene>
+    <script>
+       // Obtenim l'entitat de l'objecte Athena
+      var athenaEntity = document.querySelector('a-entity[gltf-model="#Athena"]');
+
+      // Establim la rotació de l'objecte Athena en els eixos X, Y, Z
+      athenaEntity.setAttribute('rotation', '0 0 0');
+     </script>
+  </body>
+</html>
