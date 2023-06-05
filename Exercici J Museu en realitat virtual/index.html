@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+             <!-- Posem l'objecte del museu -->
+             <a-asset-item id="sala" src="bathhouse/scene.gltf"></a-asset-item>
+
+            <!-- Posem la textura d'aigua a la pista -->
+            <img id="water" src="mar6.jpg">
+
+            <!-- Posem l'objecte de la primera torxa -->
+            <a-asset-item id="torches1" src="torches/scene.gltf"></a-asset-item>
+
+            <!-- Posem l'objecte de la segona torxa -->
+            <a-asset-item id="torches2" src="torches/scene.gltf"></a-asset-item>
+            
+             <!-- Posem l'objecte de l'Artemisa -->
+             <a-asset-item id="Artemisa" src="Artemisa/scene.gltf"></a-asset-item>
+
+             <!-- Posem l'objecte de l'Athena -->
+             <a-asset-item id="Athena" src="At/scene.gltf"></a-asset-item>
+
+             <!-- Posem l'objecte de la font -->
+             <a-asset-item id="fountain" src="fountain/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <!-- Posem una posició a aquests objectes -->
+        <a-entity gltf-model="#sala" position="0 5.6 0" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-plane src="#water" position="0 0 0" rotation="-90 0 0" width="15" height="13"></a-plane>
+        <a-entity gltf-model="#torches1" position="8 1 2" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-entity gltf-model="#torches2" position="8 1 -2" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-entity gltf-model="#Artemisa" position="8 1.5 0.2" rotation="5 5 5" scale="0.015 0.014 0.015"></a-entity>
+        <a-entity gltf-model="#Athena" position="-7 0.2 0" rotation="5 5 5" scale="0.11 0.11 0.11"></a-entity>
+        <a-entity gltf-model="#fountain" position="0 0.5 0" rotation="0 0 0" scale="0.01 0.01 0.01"></a-entity>
+
+    </a-scene>
+    <script>
+      // Obtenim l'entitat de l'objecte Artemisa
+      var artemisaEntity = document.querySelector('a-entity[gltf-model="#Artemisa"]');
+      
+      // Establim la rotació de l'objecte Artemisa en els eixos X, Y, Z
+      artemisaEntity.setAttribute('rotation', '0 270 0');
+
+       // Obtenim l'entitat de l'objecte Athena
+      var athenaEntity = document.querySelector('a-entity[gltf-model="#Athena"]');
+
+      // Establim la rotació de l'objecte Athena en els eixos X, Y, Z
+      athenaEntity.setAttribute('rotation', '0 80 0');
+     </script>
+  </body>
+</html>
