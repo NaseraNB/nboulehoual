@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+             <!-- Ponemos el objeto del mueso -->
+             <a-asset-item id="sala" src="bathhouse/scene.gltf"></a-asset-item>
+
+             <!-- Ponemos la textura de agua a la pista -->
+             <img id="water" src="mar6.jpg">
+
+             <!-- Ponemos el objeto de la primera antorcha -->
+             <a-asset-item id="torches1" src="torches/scene.gltf"></a-asset-item>
+
+             <!-- Ponemos el objeto de la segunda antorcha -->
+             <a-asset-item id="torches2" src="torches/scene.gltf"></a-asset-item>
+              
+             <!-- Ponemos el objeto de Artemisa -->
+             <a-asset-item id="Artemisa" src="Artemisa/scene.gltf"></a-asset-item>
+
+             <!-- Ponemos el objeto de Athena -->
+             <a-asset-item id="Athena" src="At/scene.gltf"></a-asset-item>
+
+             <!-- Ponemos el objeto de la fuente -->
+             <a-asset-item id="fountain" src="fountain/scene.gltf"></a-asset-item>
+
+             <!-- Ponemos el objeto del baston 1 -->
+             <a-asset-item id="baston" src="Bastons/scene.gltf"></a-asset-item>
+
+             <!-- Ponemos el objeto del baston 2 -->
+             <a-asset-item id="baston1" src="Bastons/scene.gltf"></a-asset-item>
+
+             <!-- Ponemos el objeto del baston 3 -->
+             <a-asset-item id="baston2" src="Bastons/scene.gltf"></a-asset-item>
+
+             <!-- Ponemos el objeto del baston 4 -->
+             <a-asset-item id="baston3" src="Bastons/scene.gltf"></a-asset-item>
+
+             <!-- Ponemos el objeto del baston 5 -->
+             <a-asset-item id="baston4" src="Bastons/scene.gltf"></a-asset-item>
+
+             <!-- Ponemos el objeto del baston 6 -->
+             <a-asset-item id="baston5" src="Bastons/scene.gltf"></a-asset-item>
+
+        </a-assets>
+
+        <a-entity gltf-model="#sala" position="0 5.6 0" rotation="0 0 0" scale="1 1 1"></a-entity>
+
+        <a-plane src="#water" position="0 0 0" rotation="-90 0 0" width="15" height="13"></a-plane>
+
+        <a-entity gltf-model="#torches1" position="8 1 2" rotation="0 0 0" scale="1 1 1"></a-entity>
+
+        <a-entity gltf-model="#torches2" position="8 1 -2" rotation="0 0 0" scale="1 1 1"></a-entity>
+
+        <a-entity gltf-model="#Artemisa" position="8 1.5 0.2" rotation="5 5 5" scale="0.015 0.014 0.015"></a-entity>
+
+        <a-entity gltf-model="#Athena" position="-7 0.2 0" rotation="5 5 5" scale="0.11 0.11 0.11"></a-entity>
+
+        <a-entity gltf-model="#fountain" position="0 0.5 0" rotation="0 0 0" scale="0.01 0.01 0.01"></a-entity>
+
+        <a-entity gltf-model="#baston" position="4.2 0.5 -3" rotation="0 0 0" scale="0.08 0.08 0.08"></a-entity>
+
+        <a-entity gltf-model="#baston1" position="0 0.5 -3" rotation="0 0 0" scale="0.08 0.08 0.08"></a-entity>
+
+        <a-entity gltf-model="#baston2" position="-4 0.5 -3" rotation="0 0 0" scale="0.08 0.08 0.08"></a-entity>
+
+        <a-entity gltf-model="#baston3" position="4.2 0.5 3" rotation="0 0 0" scale="0.08 0.08 0.08"></a-entity>
+
+        <a-entity gltf-model="#baston4" position="0 0.5 3" rotation="0 0 0" scale="0.08 0.08 0.08"></a-entity>
+
+        <a-entity gltf-model="#baston5" position="-4 0.5 3" rotation="0 0 0" scale="0.08 0.08 0.08"></a-entity>
+
+    </a-scene>
+    <script>
+      // Obtén la entidad del objeto de Artemisa
+      var artemisaEntity = document.querySelector('a-entity[gltf-model="#Artemisa"]');
+      
+      // Establece la rotación del objeto de Artemisa en los ejes X, Y, Z
+      artemisaEntity.setAttribute('rotation', '0 270 0');
+
+       // Obtén la entidad del objeto de Athena
+      var athenaEntity = document.querySelector('a-entity[gltf-model="#Athena"]');
+
+      // Establece la rotación del objeto de Athena en los ejes X, Y, Z
+      athenaEntity.setAttribute('rotation', '0 80 0');
+    </script>
+  </body>
+</html>
