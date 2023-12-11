@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>NatCulture</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <!-- Login -->
+            <div class="box-login" id="login">
+                <div class="top-header">
+                    <!-- <img src="Logo.png" alt="logo" width="70px"> -->
+                    <h3>Login</h3>
+                    <small>Estem contents de tenir-te aquí</small>
+                </div>
+                <div class="input-group">
+                    <div class="input-field">
+                        <input type="text" class="input-box" id="logUsername" required>
+                        <label for="logUsername">Nom d'usuari</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="input-box" id="logPassword" required>
+                        <label for="logPassword">Contrasenya</label>
+                        <div class="eye-area">
+                            <div class="eye-box" onclick="myLogPassword()">
+                                <i class='bx bx-show' id="eye"></i>
+                                <i class='bx bx-hide' id="eye-slash"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox" id="formCheck" class="check">
+                        <label for="formCheck">Recorda'm</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="submit" class="input-submit" value="Inicia sessió" onclick="iniciarSesion()">
+                    </div>
+                    <div class="forgot">
+                        <a href="#">Has oblidat la contrasenya</a>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Registro -->
+        <div class="box-register" id="register">
+            <div class="top-header">
+                <!-- <img src="Logo.png" alt="logo" width="70px"> -->
+                <h3>Registra't</h3>
+                <small>Estem contents de tenir-te aquí</small>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="text" class="input-box" id="regEmail" required>
+                    <label for="regEmail">Correu electrònic</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" class="input-box" id="regUsername" required>
+                    <label for="regUsername">Nom d'usuari</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input-box" id="regPassword" required>
+                    <label for="regPassword">Contrasenya</label>
+                    <div class="eye-area">
+                        <div class="eye-box" onclick="myRegPassword()">
+                            <i class='bx bx-show' id="eye-2"></i>
+                            <i class='bx bx-hide' id="eye-slash-2"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="remember">
+                    <input type="checkbox" id="formCheck-2" class="check">
+                    <label for="formCheck-2">Recorda'm</label>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="input-submit" value="Inicia sessió" onclick="registerButton()">
+                </div>
+            </div>
+        </div>
+
+        <!-- Switch -->
+        <div class="switch">
+            <a href="#" class="login" onclick="login()">Login</a>
+            <a href="#" class="register" onclick="register()">Register</a>
+            <div class="btn-active" id="btn"></div>
+         </div>
+
+        </div>
+    </div>
+    <script>
+        var log = document.getElementById('login');
+        var reg = document.getElementById('register');
+        var btn = document.getElementById('btn');
+
+        function login(){
+            log.style.left = "27px";
+            reg.style.right = "-350px";
+            btn.style.left = "0px";
+        }
+        function register(){
+            log.style.left = "-350px";
+            reg.style.right = "25px";
+            btn.style.left = "150px";
+        }
+
+        function myLogPassword(){
+            var a = document.getElementById("logPassword");
+            var b = document.getElementById("eye");
+            var c = document.getElementById("eye-slash");
+            if(a.type === "password"){
+                a.type = "text";
+                b.style.opacity = "0";
+                c.style.opacity = "1";
+            }else{
+                a.type = "password";
+                b.style.opacity = "1";
+                c.style.opacity = "0";
+            }
+        }
+
+        function myRegPassword(){
+    
+            var d = document.getElementById("regPassword");
+            var b = document.getElementById("eye-2");
+            var c = document.getElementById("eye-slash-2");
+
+            if(d.type === "password"){
+                d.type = "text";
+                b.style.opacity = "0";
+                c.style.opacity = "1";
+            }else{
+                d.type = "password";
+                b.style.opacity = "1";
+                c.style.opacity = "0";
+            }
+        }
+
+        function registerButton() {
+            // Obtener los datos del formulario de registro
+            var regEmail = document.getElementById("regEmail").value;
+            var regUsername = document.getElementById("regUsername").value;
+            var regPassword = document.getElementById("regPassword").value;
+
+            // Verificar que los campos no estén en blanco
+            if (regEmail.trim() === '' || regUsername.trim() === '' || regPassword.trim() === '') {
+                alert("Por favor, completa todos los campos.");
+                return;
+            }
+
+            // Verificar si el usuario ya está registrado
+            if (localStorage.getItem(regUsername) !== null) {
+                alert("El usuario ya está registrado. Por favor, inicia sesión.");
+                return;
+            }
+
+            // Guardar los datos en localStorage
+            var userData = {
+                email: regEmail,
+                password: regPassword
+            };
+            localStorage.setItem(regUsername, JSON.stringify(userData));
+
+            // Mostrar mensaje de éxito
+            alert("Registro exitoso. Por favor, inicia sesión.");
+            login(); // Cambiar a la pantalla de inicio de sesión     
+        }
+
+
+        function iniciarSesion() {
+            // Obtener los datos del formulario de inicio de sesión
+            var logUsername = document.getElementById("logUsername").value;
+            var logPassword = document.getElementById("logPassword").value;
+
+            // Verificar que los campos no estén en blanco
+            if (logUsername.trim() === '' || logPassword.trim() === '') {
+                alert("Por favor, completa todos los campos.");
+                return;
+            }
+
+            // Verificar si el usuario existe
+            var userDataJSON = localStorage.getItem(logUsername);
+            if (userDataJSON === null) {
+                alert("Usuario no encontrado. Por favor, regístrate.");
+                return;
+            }
+
+            var userData = JSON.parse(userDataJSON);
+
+            // Verificar la contraseña
+            if (userData.password !== logPassword) {
+                alert("Contraseña incorrecta. Por favor, inténtalo de nuevo.");
+                return;
+            }
+
+          
+    localStorage.setItem("currentUsername", logUsername);
+
+    // Obtén el nombre de usuario actual (asegúrate de que sea correcto)
+    var currentUsername = localStorage.getItem("currentUsername");
+    console.log("Usuario actual:", currentUsername);
+
+            // Mostrar mensaje de éxito y abrir la pestaña "home"
+            alert("Inicio de sesión exitoso. Bienvenido, " + logUsername + "!");
+
+            // Almacenar el nombre de usuario en localStorage
+            localStorage.setItem("currentUsername", logUsername);
+
+            // Cerrar la ventana actual
+            window.close("app-bs/app.html");
+
+            // Abrir la nueva ventana (home.html)
+            window.open('Home/home.html');
+
+    
+        }
+    
+    </script>
+</body>
+</html>

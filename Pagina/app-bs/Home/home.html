@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>NatCulture</title>
+</head>
+<body>
+    
+    <!-- header -->
+    <header class="header">
+        <a href="#" class="logo"><img src="Logo.png" alt="logo" width="50px"></a>
+
+        <nav class="navbar">
+            <a href="#home">Inici</a>
+            <a href="#plant">Planta</a>
+            <a href="#aromatic">Aromàtiques</a>
+            <a href="#medicines">Medicinals</a>
+            <a href="#map">Mapa</a>
+            <a href="#camara">Càmera</a>
+        </nav>
+
+        <div class="icons">
+            <div id="login-btn"><ion-icon name="person-outline"></ion-icon></div>
+            <div id="menu-btn"><ion-icon name="menu-outline"></ion-icon></div>
+        </div>
+
+        <!-- user / history -->
+        <div class="login">
+            <h3>Historial</h3>
+            <h2 id="name-user"></h2>
+            <div class="separator"></div>
+            <p id="history">Historial d'imatges</p>
+            <div id="historial-imagenes" class="historial-imagenes"></div>
+        </div>
+    </header>
+
+    <!-- end -->
+    <!-- home -->
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Descobreix la màgia de plantes <br> medicinals.</h3>
+            <a href="#plant" class="btn">Conéixer més</a>
+        </div>
+
+        <img src="bottom_wave_01.png" alt="" class="wave" width="100%">
+
+    </section>
+    
+    <!-- end -->
+
+    <!-- plants -->
+
+    <section class="plant" id="plant">
+
+        <h2 class="deco-title">Plantas</h2>
+
+        <div class="box-container">
+
+            <div class="image">
+                <img class="im-taza" src="imagen2.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h3 class="title">Podeu trobar totes les espècies més populars.</h3>                  
+                <p>Les plantes medicinals més populars, com la camamilla i la menta, 
+                    no només afegixen sabor a les infusions, sinó que també ofereixen 
+                    propietats terapèutiques. Aquestes herbes són apreciades pels 
+                    seus beneficis per a la salut i el seu ús en la medicina tradicional.</p>
+
+                <div class="icons-container">
+                    <div class="icons">
+                        <ion-icon name="document-text-outline" class="fas"></ion-icon>
+                        <h3>Informem</h3>
+                    </div>
+
+                    <div class="icons">
+                        <ion-icon name="pin-outline" class="fas"></ion-icon>
+                        <h3>Ubiquem</h3>
+                    </div>
+
+                    <div class="icons">
+                        <ion-icon name="leaf-outline" class="fas"></ion-icon>
+                        <h3>Mostrem al seu aspecte</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end -->
+
+    <!-- List auromatic -->
+
+    <section class="list" id="aromatic">
+        
+        <h2 class="heading">Plantes aromàtiques</h2>
+
+        <div class="box-container">
+
+            <div class="box" id="lavanda1">
+                <img src="list1.jpg" alt="">
+                <div class="content">
+                    <h3>Lavanda</h3>
+                    <p>Té un aroma floral i relaxant, utilitzat comunament en productes per a la cura personal i en aromateràpia.</p>
+                    <a href="#" class="btn">M'agrada</a>
+                </div>
+            </div>
+
+            <div class="box" id="menta">
+                <img src="list2.jpg" alt="">
+                <div class="content">
+                    <h3>Menta</h3>
+                    <p>Fresca i mentolada, es fa servir comunament en infusions i en la cuina.</p>
+                    <a href="#" class="btn">M'agrada</a>
+                </div>
+            </div>
+
+
+            <div class="box" id="p">
+                <img src="list3.jpg" alt="">
+                <div class="content">
+                    <h3>Romero</h3>
+                    <p>Amb una aroma fresca i herbàcia, és utilitzat a la cuina i en olis essencials.</p>
+                    <a href="#" class="btn">M'agrada</a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <img src="list4.jpg" alt="">
+                <div class="content">
+                    <h3>Alfàbrega</h3>
+                    <p>Amb una aroma dolça i picant, és un ingredient popular a la cuina mediterrània.</p>
+                    <a href="#" class="btn">M'agrada</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- end -->
+
+
+    <!-- List medicinals -->
+
+    <section class="list" id="medicines">
+        
+        <h2 class="heading">Plantes medicinals</h2>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="list5.jpg" alt="">
+                <div class="content">
+                    <h3>Aloe vera </h3>
+                    <p>Amb propietats cicatritzants i antiinflamatòries, s'utilitza per tractar cremades i problemes de pell.</p>
+                    <a href="#" class="btn">M'agrada</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="list6.jpg" alt="">
+                <div class="content">
+                    <h3>Equinàcia</h3>
+                    <p>Es creu que enforteix el sistema immunitari i pot ajudar a prevenir refredats i grips.</p>
+                    <a href="#" class="btn">M'agrada</a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <img src="list7.jpg" alt="">
+                <div class="content">
+                    <h3>Ruda</h3>
+                    <p>Alleujar problemes digestius i menstruals, encara que el seu ús ha de ser moderat a causa de possibles efectes secundaris.</p>
+                    <a href="#" class="btn">M'agrada</a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <img src="list8.jpg" alt="">
+                <div class="content">
+                    <h3>Hisopo</h3>
+                    <p>Alleujar la congestió en problemes respiratoris.</p>
+                    <a href="#" class="btn">M'agrada</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- end -->
+
+    <!-- mapa -->
+
+  <!-- Planta Medicinal Section -->
+    <section class="medicinals-list" id="map">
+
+        <h2 class="medicinals-heading">Mapa</h2>
+
+        <form id="medicinalsForm" class="medicinals-form">
+            <div class="medicinals-map-container">
+                <img src="mapa0.png" alt="Blank Map" id="medicinalsMap" class="medicinals-map">
+            </div>
+
+            <div class="medicinals-select">
+                <p class="medicinals-select-message">Seleccioneu una planta per mostrar la seva ubicació::</p>
+                <select id="medicinalsSelect" name="medicinalsSelect">
+                    <option value="blank">Seleccionar una planta</option>
+                    <option value="lavanda">Lavanda</option>
+                    <option value="manzanilla">Camamilla</option>
+                    <option value="menta">Menta</option>
+                </select>
+            </div>
+            
+            <button type="button" class="medicinals-btn" onclick="showMedicinalsMap()">Mostrar Mapa</button>
+        </form>
+    </section>    
+    <!-- end mapa -->
+
+    <!-- camera -->
+
+    <section class="camera-section" id="camara">
+        <h2 class="camera-heading">Càmera</h2>
+        <p class="camera-message">Toca la càmera per escanejar la imatge i mostrar una descripció de la planta</p>
+        <div class="camera-container">
+            <label for="cameraInput" class="camera-icon">
+                <ion-icon name="camera-outline"></ion-icon>
+            </label>
+            <input type="file" accept="image/*" style="display: none;" id="cameraInput" onchange="processSelectedImage(event)">
+            <p id="lavandaMessage" class="lavanda-message"></p>
+        </div>
+    </section>
+
+
+    <!-- end camera -->
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Dades de contacte</h3>
+                <a href="#" class="links"><ion-icon name="call-outline"></ion-icon>+34 646 77 88 00</a>
+                <a href="#" class="links"><ion-icon name="mail-outline"></ion-icon>natculture@gmail.com</a>
+                <a href="#" class="links"><ion-icon name="school-outline"></ion-icon>I.E.S. Castellet</a>
+            </div>
+
+            <div class="box">
+                <h3>Links ràpids</h3>
+                <a href="#home" class="links"><ion-icon name="home-outline"></ion-icon>Inici</a>
+                <a href="#plant" class="links"><ion-icon name="leaf-outline"></ion-icon>Planta</a>
+                <a href="#aromatic" class="links"><ion-icon name="rose-outline"></ion-icon>Aromàtiques</a>
+                <a href="#medicines" class="links"><ion-icon name="color-fill-outline"></ion-icon>Medicinals</a>
+                <a href="#Mapa" class="links"><ion-icon name="map-outline"></ion-icon>Mapa</a>
+                <a href="#Càmera" class="links"><ion-icon name="camera-outline"></ion-icon>Càmera</a>
+            </div>
+
+            <div class="box">
+                <h3>Em pot seguir</h3>
+                <a href="#https://www.facebook.com/?locale=es_ES" class="links"><ion-icon name="logo-facebook"></ion-icon>Facebook</a>
+                <a href="#https://twitter.com/?lang=es" class="links"><ion-icon name="logo-twitter"></ion-icon>Twitter</a>
+                <a href="#https://www.instagram.com/" class="links"><ion-icon name="logo-instagram"></ion-icon>Instagram</a>
+                <a href="#https://es.linkedin.com/" class="links"><ion-icon name="logo-linkedin"></ion-icon>Linkedin</a>
+            </div>
+        </div>
+
+        <div class="credit">&copy; 2023 Natculturef. tots els drets reservats per <a href="#" class="link">Natculture</a></div>
+
+    </section>
+    <!-- end -->
+
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>
